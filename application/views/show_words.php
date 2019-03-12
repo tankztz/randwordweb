@@ -71,11 +71,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Random words:</h1>
 
 	<div id="body">
-		<p>Hosted by tanktank.tk</p>
-		<code>application/views/welcome_message.php</code>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<table style="width:100%">
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th> 
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Jill</td>
+				<td>Smith</td> 
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Eve</td>
+				<td>Jackson</td> 
+				<td>94</td>
+			</tr>
+		</table>
+		
+		
+		<?php foreach ($words as $this_word): ?>
+			<?php echo "$this_word"; ?>
+		<?php endforeach; ?>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
