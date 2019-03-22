@@ -1,5 +1,12 @@
-<?php echo $title; ?>
+<?php 
+echo $title."<br>"; 
 
-<?php foreach ($words as $this_word): ?>
-	<?php echo $this_word['word']; ?>
-<?php endforeach; ?>
+$counter = 0;
+
+foreach ($words as $this_word)
+{
+	$counter++;
+	echo $this_word['word']." ";
+	if ($counter%5 == 0) echo "<br>";
+}
+
