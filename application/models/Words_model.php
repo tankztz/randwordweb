@@ -24,7 +24,7 @@ class Words_model extends CI_Model {
 		{
 			$thissql = $sql;
 			$output = array_merge($output, $this->get_word_with_id($trueSeed % $total + 1));
-			echo $i." ".$trueSeed % $total." <\br>";#echo $output[1];
+			#echo $i." ".$trueSeed % $total." <br>";#echo $output[1];
 			$trueSeed = $this->next_seed($trueSeed);
 		}
 		return $output;
